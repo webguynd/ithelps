@@ -1,0 +1,10 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <h1 class="display-6 text-center">Details for ticket: <%= ticket.title %></h1>
+    <p><strong>User Affected: </strong><%= ticket.postedBy %></p>
+    <p><strong>Device Affected: </strong><%= ticket.device %></p>
+    <p><strong>Description: </strong><%= ticket.description %></p>
+</div>
+
+<%- include("partials/footer") %> 
