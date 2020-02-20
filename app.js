@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const bparse = require('body-parser')
+const mover = require('method-override')
 const routes = require('./routes')
 
 //EXPRESS CONFIGURATION
@@ -9,6 +10,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(bparse.urlencoded({extended: true}))
 app.use(express.static('public'))
+app.use(mover('_method'))
 
 mongoose.connect(process.env.MONGO, {useNewUrlParser: true, useUnifiedTopology: true})
 

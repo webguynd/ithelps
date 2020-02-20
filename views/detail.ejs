@@ -5,6 +5,11 @@
     <p><strong>User Affected: </strong><%= ticket.postedBy %></p>
     <p><strong>Device Affected: </strong><%= ticket.device %></p>
     <p><strong>Description: </strong><%= ticket.description %></p>
+    <div class="form-group">
+        <form action="/tickets/<%= ticket._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">DELETE</button>
+        </form>
+    </div>
 </div>
 
 <%- include("partials/footer") %> 
