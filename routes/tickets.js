@@ -2,7 +2,7 @@ const ticket = require('../models/ticket')
 
 module.exports = {
     getTickets: (req, res) => {
-        ticket.find({}, (err, ticket) => {
+        ticket.find({}).sort([['createdAt', -1]]).exec((err, ticket) => {
             if(err) {
                 res.send({message: "Internal Server Error"})
             } else {

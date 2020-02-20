@@ -8,6 +8,8 @@ const routes = require('./routes')
 const app = express()
 app.set('view engine', 'ejs')
 app.use(bparse.urlencoded({extended: true}))
+app.use(express.static('public'))
+
 mongoose.connect(process.env.MONGO, {useNewUrlParser: true, useUnifiedTopology: true})
 
 //IMPORT ROUTES HERE
