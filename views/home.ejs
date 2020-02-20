@@ -1,8 +1,26 @@
 <%- include("partials/header") %> 
 
-<div class="container text-center">
-    <h1 class="display-6">Welcome to the Help Desk</h1>
-    <p>Use the link above to create a new help ticket</p>
+<div class="container-sm align-items-center">
+    <div class="row align-items-center text-center">
+        <div class="col">
+            <h1 class="display-6">Welcome to I.T. Helps</h1>
+            <p>Please use the navigation links at the top of the page.</p>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            <h4>Admin Login: </h4>
+            <div class="form-group" id="login-form">
+                <form action="/api/authenticate" method="POST">
+                    <label for="ausername">Username: </label>
+                    <input class="form-control form-control-lg" type="text" name="username" id="ausername" placeholder="username" />
+                    <label for="apassword">Password: </label>
+                    <input class="form-control form-control-lg" type="password" name="password" id="apassword" placeholder="password" />
+                    <button class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 <%- include("partials/footer") %> 

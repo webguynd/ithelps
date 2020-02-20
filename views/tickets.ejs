@@ -7,6 +7,7 @@
                 <th>Title</th>
                 <th>Device</th>
                 <th>Posted By</th>
+                <th>Date Created</th>
                 <th>Details</th>
             </tr>
         </thead>
@@ -16,6 +17,7 @@
                     <td><%= t.title %></td>
                     <td><%= t.device %></td>
                     <td><%= t.postedBy %></td>
+                    <td><%= t.createdAt %></td>
                     <td><a href="/api/tickets/<%= t._id %>">More Details...</a></td>
                 </tr>
             <% }) %>
