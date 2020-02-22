@@ -1,0 +1,18 @@
+<%- include("partials/header") %> 
+<div class="container">
+    <div class="form-group">
+        <form action="/api/tickets/<%=ticket._id%>?_method=PUT" method="POST">
+            <label for="title">Title: </label>
+            <input type="text" class="form-control" id="title" name="ticket[title]" value="<%=ticket.title%>"/>
+            <label for="device">Device affected: </label>
+            <input type="text" class="form-control" id="device" name="ticket[device]" value="<%=ticket.device%>"/>
+            <label for="postedBy">Name: </label>
+            <input type="text" class="form-control" id="postedBy" name="ticket[postedBy]" value="<%=ticket.postedBy%>"/>
+            <label for="description">Description: </label>
+            <textarea class="form-control" id="description" name="ticket[description]"><%=ticket.description%></textarea>
+            <button class="btn btn-warning">Edit</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer") %> 

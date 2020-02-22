@@ -8,7 +8,7 @@
     <div class="form-group">
         <form action="/tickets/<%= ticket._id %>?_method=DELETE" method="POST">
             <button class="btn btn-danger">DELETE</button>
-            <a class="btn btn-warning" href="#">EDIT</a>
+            <a class="btn btn-warning" href="/api/tickets/<%=ticket._id%>/edit">EDIT</a>
             <a class="btn btn-success" href="#">COMPLETE</a>
         </form>
     </div>

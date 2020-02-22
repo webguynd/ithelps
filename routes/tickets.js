@@ -34,7 +34,28 @@ module.exports = {
                 res.redirect('/')
             }
         })
+    },
+
+    editTicketPage: (req, res) => {
+        ticket.findById(req.params.id, (err, ticket) => {
+            if(err) {
+                res.send({message: "Internal server error"})
+            } else {
+                res.render('edit', {ticket: ticket})
+            }
+        })
+    },
+
+    editTicket: (req, res) => {
+        ticket.findByIdAndUpdate(req.params.id, req.body.ticket, (err, ticket) => {
+            if(err) {
+                res.send({message: "Error"})
+            } else {
+                res.redirect('/')
+            }
+        })
     }
+
 
 
 }
