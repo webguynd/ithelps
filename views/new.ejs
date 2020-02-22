@@ -3,13 +3,13 @@
     <div class="form-group">
         <form action="/api/tickets" method="POST">
             <label for="title">Title: </label>
-            <input type="text" class="form-control" id="title" name="title" />
+            <input type="text" class="form-control" id="title" name="ticket[title]" />
             <label for="device">Device affected: </label>
-            <input type="text" class="form-control" id="device" name="device" />
+            <input type="text" class="form-control" id="device" name="ticket[device]" />
             <label for="postedBy">Name: </label>
-            <input type="text" class="form-control" id="postedBy" name="postedBy" />
+            <input type="text" class="form-control" id="postedBy" name="ticket[postedBy]" />
             <label for="description">Description: </label>
-            <textarea class="form-control" id="description" name="description"></textarea>
+            <textarea class="form-control" id="description" name="ticket[description]"></textarea>
             <button class="btn btn-primary">Submit</button>
         </form>
     </div>

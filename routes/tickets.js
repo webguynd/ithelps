@@ -23,11 +23,8 @@ module.exports = {
     },
 
     createNewTicket: (req, res) => {
-        let title = req.body.title
-        let device = req.body.device
-        let description = req.body.description
-        let postedBy = req.body.postedBy
-        ticket.create({title: title, device: device, description: description, postedBy: postedBy}, (err, ticket) => {
+    
+        ticket.create(req.body.ticket, (err, ticket) => {
             if(err) {
                 res.send({message: "Error occured"})
             } else {
