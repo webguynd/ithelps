@@ -9,5 +9,6 @@ router.route('/tickets/:id/edit').get(ticket.editTicketPage);
 router.route('/tickets/:id').put(ticket.editTicket);
 //IDENTITY ROUTES
 router.route('/identity/register').get(users.showRegisterPage);
+router.route('/identity/register').post(users.registerUser);
 
 module.exports = router
